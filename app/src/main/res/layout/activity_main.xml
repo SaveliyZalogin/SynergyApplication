@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/adult"
+                    android:contentDescription="@null"/>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="0dp"/>
+                <EditText
+                    android:id="@+id/adult_ticket_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/adult_ticket_price_hint"
+                    style="@style/MyEditText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <Space
+                    android:layout_width="32dp"
+                    android:layout_height="0dp"/>
+                <EditText
+                    android:id="@+id/adult_ticket_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="false"
+                    android:hint="@string/tickets_count_hint"
+                    android:inputType="number"
+                    android:textAppearance="@style/TextAppearance.Material3.SearchView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/child"
+                    android:contentDescription="@null"/>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/child_ticket_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Material3.SearchView"
+                    android:text="@string/child_ticket_price_hint"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/child_ticket_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="false"
+                android:hint="@string/tickets_count_hint"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="24dp"
+                android:inputType="number"
+                android:textAppearance="@style/TextAppearance.Material3.SearchView" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/retire"
+                    android:contentDescription="@null"/>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:id="@+id/retire_ticket_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Material3.SearchView"
+                    android:text="@string/retire_ticket_price_hint"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/retire_ticket_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="false"
+                android:hint="@string/tickets_count_hint"
+                android:inputType="number"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@style/TextAppearance.Material3.SearchView" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="?attr/colorSurfaceVariant">
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result_text"
+            android:layout_gravity="start"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+
+        <ImageButton
+            android:id="@+id/calculate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/calculate"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@null" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
